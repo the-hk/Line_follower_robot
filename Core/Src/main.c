@@ -407,10 +407,17 @@ int main(void)
 				pid=0;
 			}
 			}
-		
-		
-			__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1,2+pidErr);
-	__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1,2-pidErr);
+		if (pidErr>50){
+			pidErr=50;
+		}
+		if (pidErr<-50){
+			pidErr=-50;
+		}
+		pwmA = 50 + pidErr;
+		pwmB = 50 - pidErr;
+			
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1,pwmA);
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1,pwmB);
 			
 		
 		
