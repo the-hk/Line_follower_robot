@@ -1,0 +1,25 @@
+--cpu=Cortex-M4.fp.sp
+"line_follower_trial\startup_stm32f407xx.o"
+"line_follower_trial\main.o"
+"line_follower_trial\stm32f4xx_it.o"
+"line_follower_trial\stm32f4xx_hal_msp.o"
+"line_follower_trial\stm32f4xx_hal_tim.o"
+"line_follower_trial\stm32f4xx_hal_tim_ex.o"
+"line_follower_trial\stm32f4xx_hal_rcc.o"
+"line_follower_trial\stm32f4xx_hal_rcc_ex.o"
+"line_follower_trial\stm32f4xx_hal_flash.o"
+"line_follower_trial\stm32f4xx_hal_flash_ex.o"
+"line_follower_trial\stm32f4xx_hal_flash_ramfunc.o"
+"line_follower_trial\stm32f4xx_hal_gpio.o"
+"line_follower_trial\stm32f4xx_hal_dma_ex.o"
+"line_follower_trial\stm32f4xx_hal_dma.o"
+"line_follower_trial\stm32f4xx_hal_pwr.o"
+"line_follower_trial\stm32f4xx_hal_pwr_ex.o"
+"line_follower_trial\stm32f4xx_hal_cortex.o"
+"line_follower_trial\stm32f4xx_hal.o"
+"line_follower_trial\stm32f4xx_hal_exti.o"
+"line_follower_trial\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "line_follower_trial\line_follower_trial.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "line_follower_trial.map" -o line_follower_trial\line_follower_trial.axf
